@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Username Generator | Specified Length</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="app-container">
+    <header class="header">
+      <div class="badge-tag">Powered by <span>string-toolkit-simple-pratiksh</span></div>
+      <h1>Username Generator</h1>
+      <p class="subtitle">Craft custom usernames with an exact specified character length</p>
+    </header>
+
+    <main class="main-card">
+      <div class="controls-grid">
+        <!-- Length Control -->
+        <div class="control-group full-width">
+          <div class="label-row">
+            <label for="lengthSlider">Target Length:</label>
+            <span class="length-badge" id="lengthDisplay">10 characters</span>
+          </div>
+          <div class="slider-wrapper">
+            <span class="range-min">3</span>
+            <input type="range" id="lengthSlider" min="3" max="30" value="10">
+            <span class="range-max">30</span>
+          </div>
+        </div>
+
+        <!-- Style Control -->
+        <div class="control-group">
+          <label for="styleSelect">Username Style</label>
+          <div class="select-wrapper">
+            <select id="styleSelect">
+              <option value="camelCase" selected>camelCase (e.g. cyberWolf)</option>
+              <option value="snake_case">snake_case (e.g. cyber_wolf)</option>
+              <option value="kebab-case">kebab-case (e.g. cyber-wolf)</option>
+              <option value="pascal">PascalCase (e.g. CyberWolf)</option>
+              <option value="lowercase">lowercase (e.g. cyberwolf)</option>
+              <option value="uppercase">UPPERCASE (e.g. CYBERWOLF)</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Category Control -->
+        <div class="control-group">
+          <label for="categorySelect">Theme / Category</label>
+          <div class="select-wrapper">
+            <select id="categorySelect">
+              <option value="all" selected>All Categories</option>
+              <option value="gaming">Gaming & Esports</option>
+              <option value="tech">Tech & Developers</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Seed Input -->
+        <div class="control-group">
+          <label for="seedInput">Custom Keyword / Seed (Optional)</label>
+          <input type="text" id="seedInput" placeholder="e.g. alex, shadow, dev" maxlength="20">
+        </div>
+
+        <!-- Count & Numbers -->
+        <div class="control-group side-by-side">
+          <div>
+            <label for="countSelect">Generate Count</label>
+            <select id="countSelect">
+              <option value="4">4 usernames</option>
+              <option value="8" selected>8 usernames</option>
+              <option value="12">12 usernames</option>
+              <option value="16">16 usernames</option>
+            </select>
+          </div>
+
+          <div class="checkbox-container">
+            <label class="checkbox-label" for="numbersToggle">
+              <input type="checkbox" id="numbersToggle" checked>
+              <span class="checkbox-custom"></span>
+              <span>Allow Numbers</span>
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <div class="action-row">
+        <button id="generateBtn" class="btn primary-btn">
+          <span class="btn-icon">⚡</span> Generate Usernames
+        </button>
+      </div>
+
+      <!-- Results section -->
+      <section class="results-section">
+        <div class="results-header">
+          <h3>Generated Usernames</h3>
+          <span class="results-count" id="resultsCount">8 ready</span>
+        </div>
+        <div id="resultsGrid" class="results-grid">
+          <!-- Populated by JS -->
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>Built with <a href="https://www.npmjs.com/package/string-toolkit-simple-pratiksh" target="_blank" rel="noopener">string-toolkit-simple-pratiksh</a> &bull; Simple string toolkit utility</p>
+    </footer>
+  </div>
+
+  <div id="toast" class="toast">Copied to clipboard!</div>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+{
+  "name": "username-generator-specified-length",
+  "version": "1.0.0",
+  "description": "A configurable username generator producing usernames of exact specified length, powered by string-toolkit-simple-pratiksh",
+  "main": "index.js",
+  "bin": {
+    "username-gen": "./src/cli.js"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "cli": "node src/cli.js",
+    "test": "node test/generator.test.js"
+  },
+  "keywords": [
+    "username",
+    "generator",
+    "specified-length",
+    "string-toolkit-simple-pratiksh",
+    "handle-generator",
+    "gamertag"
+  ],
+  "author": "Pratiksh Malik",
+  "license": "MIT",
+  "dependencies": {
+    "string-toolkit-simple-pratiksh": "^1.0.0"
+  }
+}
